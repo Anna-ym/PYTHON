@@ -1,0 +1,5 @@
+print("Hello World")
+x=input("Enter your name:")
+print(x)
+y,z=map(int,input("Enter two numbers:").split(','))
+print(y,z)
