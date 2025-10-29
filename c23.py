@@ -1,8 +1,19 @@
-import turtle 
-t=turtle.Turtle()
-t.color("blue")
-t.pensize(3)
-for i in range(4):
-    t.forward(100)
-    t.right(90)
-turtle.done()    
+import turtle
+
+
+screen = turtle.Screen()
+screen.bgcolor("black")
+
+
+pen = turtle.Turtle()
+pen.color("magenta")
+pen.speed(0)
+
+
+for i in range(36):
+    pen.circle(100)
+    pen.right(10)
+
+
+pen.hideturtle()
+turtle.done()
