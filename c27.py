@@ -1,7 +1,7 @@
 ob=open("f1.txt","r")
 ob2=open("f2.txt","w")
 for line_no, line in enumerate(ob, start=1):
-    if line_no % 2 != 0:  # Odd line numbers
+    if line_no % 2 != 0: 
         ob2.write(line)
 ob.close()
 ob2.close()

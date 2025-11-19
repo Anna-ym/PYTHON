@@ -17,7 +17,7 @@ class Bank:
             print("Your current balance: ",self.bal)
             
 ano=input("Enter your account number: ")
-aname=input("\nenter your name: ")
+aname=input("\nenter your name: ")              
 balan=float(input("\nEnter you account balance: "))
 acc= Bank(ano,aname,balan)
 print("MENU\n1.Deposit\n2.Withdraw\n3.Balance: ")  
