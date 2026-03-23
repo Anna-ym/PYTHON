@@ -1,0 +1,26 @@
+#sqlfile.6
+SELECT `product`.`pdtld`,
+    `product`.`pname`,
+    `product`.`price`,
+    `product`.`quantity`
+FROM `store`.`product`;
+CALL insert_product(100,'pen',10,100);
+CALL insert_product(101,'pencil',5,102);
+
+
+
+
+#insert_product stored procedure
+CREATE DEFINER=`root`@`localhost` PROCEDURE `insert_product`(
+IN pdtld INT,
+IN pname VARCHAR(20),
+IN price INT,
+IN quantity INT
+)
+BEGIN
+	IF price > 0 THEN
+		INSERT INTO product(pdtld,pname,price,quantity)VALUES(pdtld,pname,price,quantity);
+        ELSE
+        SELECT 'Price must be greater then 0' AS message;
+        END IF;
+END

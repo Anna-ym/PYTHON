@@ -23,12 +23,6 @@ id1=int(input("Enter your id: "))
 name1=input("Enter your name: ")
 salary1=int(input("Enter your salary: "))
 emp1=Employee(id1,name1,salary1) 
- 
-id2=int(input("Enter your id: "))
-name2=input("Enter your name: ")
-salary2=int(input("Enter your salary: "))
-emp2=Employee(id2,name2,salary2) 
-
 print("MENU\n")
 ch=0
 while ch!=4: 
