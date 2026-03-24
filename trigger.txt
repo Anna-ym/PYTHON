@@ -1,0 +1,35 @@
+INSERT INTO `trigger`.`product`
+(`pdtld`,
+`pname`,
+`price`,
+`qtystk`)
+VALUES
+(1,'pen',10,100);
+
+
+SELECT * FROM `trigger`.`product`;
+INSERT INTO `trigger`.`product`
+(`pdtld`,
+`pname`,
+`price`,
+`qtystk`)
+VALUES
+(2,'pencil',8,101);
+INSERT INTO `trigger`.`product` VALUES(3,'eraser',15,30);
+INSERT INTO `trigger`.`product` VALUES(4,'scale',20,50);
+INSERT INTO `trigger`.`product` VALUES(5,'pen',20,100);
+USE `trigger`;
+INSERT INTO `trigger`.`product` VALUES(7,'pen',20,100);
+INSERT INTO `trigger`.`sale` VALUES(104,'Kannur');
+DELIMITER $$
+CREATE TRIGGER updateAvailableQuantity
+AFTER INSERT ON saleitem
+FOR EACH ROW
+BEGIN
+	UPDATE product
+    SET qtystk=qtystk-NEW.qty
+    WHERE pdtld =NEW.pdtld;
+END$$
+DELIMITER ;
+INSERT INTO `trigger`.`saleitem` VALUES(103,7,40);
+SELECT * FROM `trigger`.`product`;
