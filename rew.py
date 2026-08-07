@@ -1,0 +1,1 @@
+#create an array 4 *4 with random values.create a new array from the said array by swapping first and last rows 

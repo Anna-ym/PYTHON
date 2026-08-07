@@ -1,0 +1,8 @@
+#numpy pgm to create a vector with values from 0 to 20 and change the sign of the numbers in the range from 9 to 15
+import numpy as np
+arr=np.arange(0,21)
+print(arr)
+#arr>=9 & arr<=15
+for i in range(9,16):
+    arr[i]=arr[i]*-1
+print(arr)
