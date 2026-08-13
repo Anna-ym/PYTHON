@@ -22,7 +22,7 @@ knn.fit(X_train, y_train)
 y_pred = knn.predict(X_test)
 print(y_pred)
 print(y_test)
-print("Mean Squared Error:", mean_squared_error(y_test, y_pred))
+#print("Mean Squared Error:", mean_squared_error(y_test, y_pred))
 #the average squared difference between the actual values and the values predicted by your model
 print("R2 Score:", r2_score(y_test, y_pred))
 #model's predictions explain the variance of the actual data compared to a simple baseline
